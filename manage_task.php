@@ -16,7 +16,7 @@ if(isset($_GET['id'])){
 			<input type="text" class="form-control form-control-sm" name="task" value="<?php echo isset($task) ? $task : '' ?>" required>
 		</div>
 		<div class="form-group">
-			<label for="">Description</label>
+			<label for="">Mô tả</label>
 			<textarea name="description" id="" cols="30" rows="10" class="summernote form-control">
 				<?php echo isset($description) ? $description : '' ?>
 			</textarea>
@@ -24,9 +24,9 @@ if(isset($_GET['id'])){
 		<div class="form-group">
 			<label for="">Status</label>
 			<select name="status" id="status" class="custom-select custom-select-sm">
-				<option value="1" <?php echo isset($status) && $status == 1 ? 'selected' : '' ?>>Pending</option>
-				<option value="2" <?php echo isset($status) && $status == 2 ? 'selected' : '' ?>>On-Progress</option>
-				<option value="3" <?php echo isset($status) && $status == 3 ? 'selected' : '' ?>>Done</option>
+				<option value="1" <?php echo isset($status) && $status == 1 ? 'selected' : '' ?>>Chưa giải quyết</option>
+				<option value="2" <?php echo isset($status) && $status == 2 ? 'selected' : '' ?>>Đang tiến hành</option>
+				<option value="3" <?php echo isset($status) && $status == 3 ? 'selected' : '' ?>>Hoàn thành</option>
 			</select>
 		</div>
 	</form>

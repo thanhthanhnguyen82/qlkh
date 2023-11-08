@@ -30,8 +30,8 @@
               </span>
             </a>
             <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
-              <a class="dropdown-item" href="javascript:void(0)" id="manage_account"><i class="fa fa-cog"></i> Manage Account</a>
-              <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
+              <a class="dropdown-item" href="javascript:void(0)" id="manage_account"><i class="fa fa-cog"></i> Quản lí tài khoản</a>
+              <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Đăng xuất</a>
             </div>
       </li>
     </ul>

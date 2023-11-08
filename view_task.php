@@ -9,11 +9,11 @@ if(isset($_GET['id'])){
 ?>
 <div class="container-fluid">
 	<dl>
-		<dt><b class="border-bottom border-primary">Task</b></dt>
+		<dt><b class="border-bottom border-primary">Nhiệm vụ</b></dt>
 		<dd><?php echo ucwords($task) ?></dd>
 	</dl>
 	<dl>
-		<dt><b class="border-bottom border-primary">Status</b></dt>
+		<dt><b class="border-bottom border-primary">Trạng thái</b></dt>
 		<dd>
 			<?php 
         	if($status == 1){
@@ -27,7 +27,7 @@ if(isset($_GET['id'])){
 		</dd>
 	</dl>
 	<dl>
-		<dt><b class="border-bottom border-primary">Description</b></dt>
+		<dt><b class="border-bottom border-primary">Mô tả</b></dt>
 		<dd><?php echo html_entity_decode($description) ?></dd>
 	</dl>
 </div>

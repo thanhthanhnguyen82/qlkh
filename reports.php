@@ -20,11 +20,11 @@
                 <thead>
                   <th>#</th>
                   <th>Project</th>
-                  <th>Task</th>
-                  <th>Completed Task</th>
-                  <th>Work Duration</th>
-                  <th>Progress</th>
-                  <th>Status</th>
+                  <th>Nhiệm vụ</th>
+                  <th>Nhiệm vụ đã hoàn thành</th>
+                  <th>Thời gian làm việc</th>
+                  <th>Tiến triển</th>
+                  <th>TRạng thái</th>
                 </thead>
                 <tbody>
                 <?php

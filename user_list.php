@@ -3,7 +3,7 @@
 	<div class="card card-outline card-success">
 		<div class="card-header">
 			<div class="card-tools">
-				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=new_user"><i class="fa fa-plus"></i> Add New User</a>
+				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=new_user"><i class="fa fa-plus"></i> Thêm thành viên mới</a>
 			</div>
 		</div>
 		<div class="card-body">
@@ -11,16 +11,16 @@
 				<thead>
 					<tr>
 						<th class="text-center">#</th>
-						<th>Name</th>
+						<th>Tên</th>
 						<th>Email</th>
-						<th>Role</th>
-						<th>Action</th>
+						<th>Vai trò</th>
+						<th>Hoạt động</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 					$i = 1;
-					$type = array('',"Admin","Project Manager","Employee");
+					$type = array('',"Admin","Quản lí dự án","Nhân viên");
 					$qry = $conn->query("SELECT *,concat(firstname,' ',lastname) as name FROM users order by concat(firstname,' ',lastname) asc");
 					while($row= $qry->fetch_assoc()):
 					?>
@@ -34,11 +34,11 @@
 		                      Action
 		                    </button>
 		                    <div class="dropdown-menu" style="">
-		                      <a class="dropdown-item view_user" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">View</a>
+		                      <a class="dropdown-item view_user" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Xem</a>
 		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item" href="./index.php?page=edit_user&id=<?php echo $row['id'] ?>">Edit</a>
+		                      <a class="dropdown-item" href="./index.php?page=edit_user&id=<?php echo $row['id'] ?>">Chỉnh sửa</a>
 		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item delete_user" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Delete</a>
+		                      <a class="dropdown-item delete_user" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Xóa</a>
 		                    </div>
 						</td>
 					</tr>	

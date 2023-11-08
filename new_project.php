@@ -9,17 +9,17 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
-					<label for="" class="control-label">Name</label>
+					<label for="" class="control-label">Tên dự án</label>
 					<input type="text" class="form-control form-control-sm" name="name" value="<?php echo isset($name) ? $name : '' ?>">
 				</div>
 			</div>
           	<div class="col-md-6">
 				<div class="form-group">
-					<label for="">Status</label>
+					<label for="">Trạng thái</label>
 					<select name="status" id="status" class="custom-select custom-select-sm">
-						<option value="0" <?php echo isset($status) && $status == 0 ? 'selected' : '' ?>>Pending</option>
-						<option value="3" <?php echo isset($status) && $status == 3 ? 'selected' : '' ?>>On-Hold</option>
-						<option value="5" <?php echo isset($status) && $status == 5 ? 'selected' : '' ?>>Done</option>
+						<option value="0" <?php echo isset($status) && $status == 0 ? 'selected' : '' ?>>CHưa giải quyết</option>
+						<option value="3" <?php echo isset($status) && $status == 3 ? 'selected' : '' ?>>Tạm dừng</option>
+						<option value="5" <?php echo isset($status) && $status == 5 ? 'selected' : '' ?>>Hoàn thành</option>
 					</select>
 				</div>
 			</div>
@@ -27,13 +27,13 @@
 		<div class="row">
 			<div class="col-md-6">
             <div class="form-group">
-              <label for="" class="control-label">Start Date</label>
+              <label for="" class="control-label">Ngày bắt đầu</label>
               <input type="date" class="form-control form-control-sm" autocomplete="off" name="start_date" value="<?php echo isset($start_date) ? date("Y-m-d",strtotime($start_date)) : '' ?>">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="" class="control-label">End Date</label>
+              <label for="" class="control-label">Ngày kết thúc</label>
               <input type="date" class="form-control form-control-sm" autocomplete="off" name="end_date" value="<?php echo isset($end_date) ? date("Y-m-d",strtotime($end_date)) : '' ?>">
             </div>
           </div>
@@ -42,7 +42,7 @@
         	<?php if($_SESSION['login_type'] == 1 ): ?>
            <div class="col-md-6">
             <div class="form-group">
-              <label for="" class="control-label">Project Manager</label>
+              <label for="" class="control-label">Người quản lí dự án</label>
               <select class="form-control form-control-sm select2" name="manager_id">
               	<option></option>
               	<?php 
@@ -59,7 +59,7 @@
       <?php endif; ?>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="" class="control-label">Project Team Members</label>
+              <label for="" class="control-label">Thành viên nhóm dự án</label>
               <select class="form-control form-control-sm select2" multiple="multiple" name="user_ids[]">
               	<option></option>
               	<?php 
@@ -75,7 +75,7 @@
 		<div class="row">
 			<div class="col-md-10">
 				<div class="form-group">
-					<label for="" class="control-label">Description</label>
+					<label for="" class="control-label">Mô tả</label>
 					<textarea name="description" id="" cols="30" rows="10" class="summernote form-control">
 						<?php echo isset($description) ? $description : '' ?>
 					</textarea>

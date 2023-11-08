@@ -22,12 +22,12 @@
 					<tr>
 						<th class="text-center">#</th>
 						<th>Project</th>
-						<th>Task</th>
-						<th>Project Started</th>
-						<th>Project Due Date</th>
-						<th>Project Status</th>
-						<th>Task Status</th>
-						<th>Action</th>
+						<th>Nhiệm vụ</th>
+						<th>Bắt đầu dự án</th>
+						<th>Ngày đến hạn của dự án</th>
+						<th>Trạng thái dự án</th>
+						<th>Trạng thái nhiệm vụ</th>
+						<th>Hoạt động</th>
 					</tr>
 				</thead>
 				<tbody>

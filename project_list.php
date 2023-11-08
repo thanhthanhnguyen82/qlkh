@@ -4,7 +4,7 @@
 		<div class="card-header">
             <?php if($_SESSION['login_type'] != 3): ?>
 			<div class="card-tools">
-				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=new_project"><i class="fa fa-plus"></i> Add New project</a>
+				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=new_project"><i class="fa fa-plus"></i> Thêm đề tài</a>
 			</div>
             <?php endif; ?>
 		</div>
@@ -22,16 +22,16 @@
 					<tr>
 						<th class="text-center">#</th>
 						<th>Project</th>
-						<th>Date Started</th>
-						<th>Due Date</th>
-						<th>Status</th>
-						<th>Action</th>
+						<th>Ngày bắt đầu</th>
+						<th>Hạn cuối</th>
+						<th>Trạng thái</th>
+						<th>Hoạt động</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 					$i = 1;
-					$stat = array("Pending","Started","On-Progress","On-Hold","Over Due","Done");
+					$stat = array("Chưa giải quyết","Bắt đầu","Đang tiến hành","Tạm dừng","Quá hạn","Hoàn thành");
 					$where = "";
 					if($_SESSION['login_type'] == 2){
 						$where = " where manager_id = '{$_SESSION['login_id']}' ";
@@ -69,32 +69,33 @@
 						<td><b><?php echo date("M d, Y",strtotime($row['end_date'])) ?></b></td>
 						<td class="text-center">
 							<?php
-							  if($stat[$row['status']] =='Pending'){
+							  if($stat[$row['status']] =='Chưa giải quyết'){
 							  	echo "<span class='badge badge-secondary'>{$stat[$row['status']]}</span>";
-							  }elseif($stat[$row['status']] =='Started'){
+							  }elseif($stat[$row['status']] =='Bắt đầu'){
 							  	echo "<span class='badge badge-primary'>{$stat[$row['status']]}</span>";
-							  }elseif($stat[$row['status']] =='On-Progress'){
+							  }elseif($stat[$row['status']] =='
+							  Đang tiến hành'){
 							  	echo "<span class='badge badge-info'>{$stat[$row['status']]}</span>";
-							  }elseif($stat[$row['status']] =='On-Hold'){
+							  }elseif($stat[$row['status']] =='Tạm dừng'){
 							  	echo "<span class='badge badge-warning'>{$stat[$row['status']]}</span>";
-							  }elseif($stat[$row['status']] =='Over Due'){
+							  }elseif($stat[$row['status']] =='Quá Thời gian'){
 							  	echo "<span class='badge badge-danger'>{$stat[$row['status']]}</span>";
-							  }elseif($stat[$row['status']] =='Done'){
+							  }elseif($stat[$row['status']] =='Hoàn thành '){
 							  	echo "<span class='badge badge-success'>{$stat[$row['status']]}</span>";
 							  }
 							?>
 						</td>
 						<td class="text-center">
 							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-		                      Action
+		                      Hoạt động
 		                    </button>
 		                    <div class="dropdown-menu" style="">
-		                      <a class="dropdown-item view_project" href="./index.php?page=view_project&id=<?php echo $row['id'] ?>" data-id="<?php echo $row['id'] ?>">View</a>
+		                      <a class="dropdown-item view_project" href="./index.php?page=view_project&id=<?php echo $row['id'] ?>" data-id="<?php echo $row['id'] ?>">Xem</a>
 		                      <div class="dropdown-divider"></div>
 		                      <?php if($_SESSION['login_type'] != 3): ?>
-		                      <a class="dropdown-item" href="./index.php?page=edit_project&id=<?php echo $row['id'] ?>">Edit</a>
+		                      <a class="dropdown-item" href="./index.php?page=edit_project&id=<?php echo $row['id'] ?>">Chỉnh sửa</a>
 		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item delete_project" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Delete</a>
+		                      <a class="dropdown-item delete_project" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Xóa</a>
 		                  <?php endif; ?>
 		                    </div>
 						</td>
