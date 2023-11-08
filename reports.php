@@ -2,7 +2,7 @@
  <div class="col-md-12">
         <div class="card card-outline card-success">
           <div class="card-header">
-            <b>Project Progress đề tài </b>
+            <b>Project Progress</b>
             <div class="card-tools">
             	<button class="btn btn-flat btn-sm bg-gradient-success btn-success" id="print"><i class="fa fa-print"></i> Print</button>
             </div>
